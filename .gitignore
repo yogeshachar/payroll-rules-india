@@ -1,0 +1,56 @@
+# ===========================
+# Node & NPM
+# ===========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# ===========================
+# Build Output
+# ===========================
+dist/
+bundle/
+coverage/
+.temp/
+.tmp/
+out/
+
+# ===========================
+# TypeScript
+# ===========================
+*.tsbuildinfo
+
+# ===========================
+# Logs & Misc
+# ===========================
+logs/
+*.log
+*.bak
+*.old
+
+# ===========================
+# OS-specific files
+# ===========================
+.DS_Store
+Thumbs.db
+
+# ===========================
+# IDE / Editor
+# ===========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===========================
+# Environment / Secrets
+# ===========================
+.env
+.env.local
+.env.*.local
+
+
+id_ed25519_personal
+id_ed25519_personal.pub
