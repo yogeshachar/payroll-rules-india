@@ -1,22 +1,29 @@
 import { Rule } from "../../utils/types";
 
-export const pfRule: Rule = {
-  ruleCode: "PF_EMPLOYEE",
-  name: "Provident Fund (Employee)",
+// PF: min(Basic, 15000) * 0.12
+export const pfBasicRule: Rule = {
+  ruleCode: "PF_BASIC",
+  name: "Provident Fund (Employee) - Basic Only",
   category: "Deduction",
   type: "Statutory",
   version: "FY2024-2025",
   description:
-    "Employee contribution to Provident Fund — 12% of (Basic + HRA) if above ₹15,000, otherwise 12% of ₹15,000.",
+    "Employee contribution to Provident Fund — 12% of Basic (capped at ₹15,000).",
+  condition: "isPfApplicable == true && basic > 0",
+  monthlyFormula: "round(min(basic, 15000) * 0.12, 2)",
+  annualFormula: "round(min(basic, 15000) * 0.12 * 12, 2)",
+};
 
-  //  Apply only if PF is applicable
-  condition: "isPfApplicable == true && (basic + hra) > 0",
-
-  //  Monthly formula
-  monthlyFormula:
-    "(basic + hra) > 15000 ? round((basic + hra) * 0.12, 2) : round(15000 * 0.12, 2)",
-
-  //  Annual formula (12x monthly)
-  annualFormula:
-    "(basic + hra) > 15000 ? round((basic + hra) * 0.12 * 12, 2) : round(15000 * 0.12 * 12, 2)",
+// PF: min(Basic + DA, 15000) * 0.12
+export const pfBasicDaRule: Rule = {
+  ruleCode: "PF_BASIC_DA",
+  name: "Provident Fund (Employee) - Basic + DA",
+  category: "Deduction",
+  type: "Statutory",
+  version: "FY2024-2025",
+  description:
+    "Employee contribution to Provident Fund — 12% of (Basic + DA) if above ₹15,000, otherwise 12% of ₹15,000.",
+  condition: "isPfApplicable == true && (basic + da) > 0",
+  monthlyFormula: "round(min(basic + da, 15000) * 0.12, 2)",
+  annualFormula: "round(min(basic + da, 15000) * 0.12 * 12, 2)",
 };

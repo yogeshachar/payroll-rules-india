@@ -13,3 +13,15 @@ export const shiftAllowanceRule: Rule = {
   annualFormula: "round(payableDays * 17.16 * 12, 2)",
 };
 
+// Shift Allowance: payable days * 11.50 rupee per day
+export const shiftAllowanceRuleNew: Rule = {
+  ruleCode: "SHIFT_ALLOWANCE_NEW",
+  name: "Shift Allowance -new ",
+  category: "Earning",
+  type: "Custom",
+  version: "FY2024-2025",
+  description: "Shift Allowance = payable days * 11.50 rupee per day",
+  condition: "payableDays > 0",
+  monthlyFormula: "round(payableDays * 11.50, 2)",
+  annualFormula: "round(payableDays * 11.50 * 12, 2)",
+};
