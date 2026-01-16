@@ -14,16 +14,15 @@ export const pfBasicRule: Rule = {
   annualFormula: "round(min(basic, 15000) * 0.12 * 12, 2)",
 };
 
-// PF: min(Basic + DA, 15000) * 0.12
-export const pfBasicDaRule: Rule = {
-  ruleCode: "PF_BASIC_DA",
-  name: "Provident Fund (Employee) - Basic + DA",
+export const employeePfRule: Rule = {
+  ruleCode: "PF_EMPLOYEE",
+  name: "Provident Fund (Employee)",
   category: "Deduction",
   type: "Statutory",
   version: "FY2024-2025",
   description:
-    "Employee contribution to Provident Fund — 12% of (Basic + DA) if above ₹15,000, otherwise 12% of ₹15,000.",
-  condition: "isPfApplicable == true && (basic + da) > 0",
-  monthlyFormula: "round(min(basic + da, 15000) * 0.12, 2)",
-  annualFormula: "round(min(basic + da, 15000) * 0.12 * 12, 2)",
+    "PF = 12% of (Basic + DA), capped at ₹1,800 (₹15,000 wage ceiling)",
+  condition: "isPfApplicable && basicPlusDA > 0",
+  monthlyFormula: "round(min(basicPlusDA, 15000) * 0.12, 0)",
+  annualFormula: "round(min(basicPlusDA, 15000) * 0.12, 0) * 12",
 };

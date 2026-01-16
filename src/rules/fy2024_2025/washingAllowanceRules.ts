@@ -46,3 +46,69 @@ export const washingAllowanceTierCRevised: Rule = {
   monthlyFormula: "round(11.50 * payableDays, 2)",
   annualFormula: "round(11.50 * payableDays * 12, 2)",
 };
+
+export const washingAllowanceUSWRuleTierD: Rule = {
+  ruleCode: "WASHING_ALLOWANCE_USW",
+  name: "Washing Allowance (USW)",
+  category: "Earning",
+  type: "Custom",
+  version: "FY2024-2025",
+  description: "Washing allowance for USW category at Rs.25 per present day.",
+  condition: "payableDays > 0",
+  monthlyFormula: "round(payableDays * 25, 2)",
+};
+
+export const washingAllowanceUSWRuleTierE: Rule = {
+  ruleCode: "WASHING_ALLOWANCE_SW",
+  name: "Washing Allowance (SW)",
+  category: "Earning",
+  type: "Custom",
+  version: "FY2024-2025",
+  description: "Washing allowance for SW category at Rs.35 per present day.",
+  condition: "payableDays > 0",
+  monthlyFormula: "round(payableDays * 35, 2)",
+};
+
+export const washingAllowanceUSWRuleTierF: Rule = {
+  ruleCode: "WASHING_ALLOWANCE",
+  name: "Washing Allowance At ₹44",
+  category: "Earning",
+  type: "Custom",
+  version: "FY2024-2025",
+  description: "Washing allowance for SW category at Rs.44 per present day.",
+  condition: "payableDays > 0",
+  monthlyFormula: "round(payableDays * 44, 2)",
+};
+
+export const washingAllowanceUSWRuleTierG: Rule = {
+  ruleCode: "WASHING_ALLOWANCE_TIER_G",
+  name: "Washing Allowance At ₹5.44",
+  category: "Earning",
+  type: "Custom",
+  version: "FY2024-2025",
+  description: "Washing allowance for category at Rs.5.44 per present day.",
+  condition: "payableDays > 0",
+  monthlyFormula: "round(payableDays * 5.44, 2)",
+};
+export const washingAllowanceTierH: Rule = {
+  ruleCode: "WASHING_ALLOWANCE_TIER_H",
+  name: "Washing Allowance – Tier H",
+  category: "Earning",
+  type: "Custom",
+  version: "FY2024-2025",
+  description: "Washing Allowance = Rs. 10 * payable days",
+  condition: "payableDays > 0",
+  monthlyFormula: "round(10 * payableDays, 2)",
+  annualFormula: "round(10 * payableDays * 12, 2)",
+};
+
+export const washingAllowanceDailyRule: Rule = {
+  ruleCode: "WASHING_ALLOWANCE_DAILY",
+  name: "Washing Allowance",
+  category: "Earning",
+  type: "Custom",
+  version: "FY2024-2025",
+  description: "Washing allowance calculated at Rs.41 per payable day.",
+  condition: "payableDays > 0",
+  monthlyFormula: "round(payableDays * 41, 0)",
+};

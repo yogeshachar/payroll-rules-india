@@ -14,12 +14,13 @@ export const uniformAllowanceHSWRule: Rule = {
   annualFormula: "round(60.63 * payableDays * 12, 2)",
 };
 export const uniformAllowanceRule: Rule = {
-  ruleCode: "UNIFORM_ALLOWANCE_custom",
-  name: "Uniform Allowance - custom",
+  ruleCode: "UNIFORM_ALLOWANCE_CUSTOM",
+  name: "Uniform Allowance - custom(HSW)",
   category: "Earning",
   type: "Custom",
   version: "FY2024-2025",
-  description: "Uniform Allowance  = Rs. 65.00/- * payable days (worked days)",
+  description:
+    "ONLY FOR HSW Uniform Allowance  = Rs. 65.00/- * payable days (worked days)",
   condition: "payableDays > 0 && employeeCategory === 'HSW'",
   monthlyFormula: "round(65 * payableDays, 2)",
   annualFormula: "round(65 * payableDays * 12, 2)",
@@ -50,4 +51,17 @@ export const uniformAllowanceSSWRule: Rule = {
   condition: "payableDays > 0 && employeeCategory === 'SSW'",
   monthlyFormula: "round(38.90 * payableDays, 2)",
   annualFormula: "round(38.90 * payableDays * 12, 2)",
+};
+
+export const uniformAllowanceRuleForAll: Rule = {
+  ruleCode: "UNIFORM_ALLOWANCE_CUSTOM_ALL",
+  name: "Uniform Allowance - custom",
+  category: "Earning",
+  type: "Custom",
+  version: "FY2024-2025",
+  description:
+    "General Uniform Allowance  = Rs. 65.00/- * payable days (worked days)",
+  condition: "payableDays > 0",
+  monthlyFormula: "round(65 * payableDays, 2)",
+  annualFormula: "round(65 * payableDays * 12, 2)",
 };

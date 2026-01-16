@@ -76,3 +76,15 @@ export const hraOthersRule: Rule = {
   monthlyFormula: "round(payableDays * 0.52963, 2)",
   annualFormula: "round(payableDays * 0.52963 * 12, 2)",
 };
+
+export const hraDailyRateRule: Rule = {
+  ruleCode: "HRA_DAILY_RATE",
+  name: "HRA – Daily Rate (₹89.30)",
+  category: "Earning",
+  type: "Custom",
+  version: "FY2024-2025",
+  description: "House Rent Allowance calculated at ₹89.30 per payable day",
+  condition: "payableDays > 0",
+  monthlyFormula: "round(payableDays * 89.3, 2)",
+  annualFormula: "round(payableDays * 89.3, 2)",
+};
