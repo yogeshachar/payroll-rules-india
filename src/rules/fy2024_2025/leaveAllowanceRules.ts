@@ -25,4 +25,3 @@ export const leaveBasic4_8Rule: Rule = {
   monthlyFormula: "round(basic * 0.048, 2)",
   annualFormula: "round(basic * 0.048 * 12, 2)",
 };
-

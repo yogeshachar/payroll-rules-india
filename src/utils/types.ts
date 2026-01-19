@@ -1,8 +1,8 @@
 export type Rule = {
   ruleCode: string;
   name: string;
-  category: "Earning" | "Deduction";
-  type?: "Statutory" | "Custom";
+  category: "Earning" | "Deduction" | "Adjustment";
+  type?: "Statutory" | "Custom" | "Fixed";
   description?: string;
   version?: string;
   condition?: string;

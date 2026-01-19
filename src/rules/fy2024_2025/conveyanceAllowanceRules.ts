@@ -52,3 +52,15 @@ export const conveyanceDaily75Rule: Rule = {
   annualFormula: "round(payableDays * 75 * 12, 2)",
 };
 
+
+export const conveyanceDailyRateRule: Rule = {
+  ruleCode: "CONVEYANCE_DAILY_RATE",
+  name: "Conveyance – Daily Rate (₹31.26)",
+  category: "Earning",
+  type: "Custom",
+  version: "FY2024-2025",
+  description: "Conveyance allowance calculated at ₹31.255 per payable day",
+  condition: "payableDays > 0",
+  monthlyFormula: "round(payableDays * 31.255, 2)",
+  annualFormula: "round(payableDays * 31.255, 2)",
+};
