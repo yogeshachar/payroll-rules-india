@@ -35,3 +35,6 @@ export * from "./extraBasicRules";
 export * from "./dearnessAllowanceRules";
 export * from "./otherDeductionsRule";
 export * from "./overTimesRules";
+export * from "./jaggeryAllowanceRule";
+export * from "./employerPfRules";
+export * from "./employerEsiRules";

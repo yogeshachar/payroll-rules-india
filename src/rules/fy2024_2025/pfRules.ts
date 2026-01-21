@@ -26,3 +26,15 @@ export const employeePfRule: Rule = {
   monthlyFormula: "round(min(basicPlusDA, 15000) * 0.12, 0)",
   annualFormula: "round(min(basicPlusDA, 15000) * 0.12, 0) * 12",
 };
+
+export const employeePfBasicRule: Rule = {
+  ruleCode: "EMPLOYEE_PF_BASIC",
+  name: "Employee Provident Fund",
+  category: "Deduction",
+  type: "Statutory",
+  version: "FY2024-2025",
+  description: "PF = 12% of Basic",
+  condition: "basic > 0",
+  monthlyFormula: "round(basic * 0.12, 0)",
+  annualFormula: "round(basic * 0.12, 0) * 12",
+};

@@ -60,3 +60,15 @@ export const mobileAllowaceTierC: Rule = {
   monthlyFormula: "round(8.93 * payableDays, 2)",
   annualFormula: "round(8.93 * payableDays, 2)",
 };
+
+export const mobileAllowaceTierD: Rule = {
+  ruleCode: "MOBILE_Allowance_TIER_D",
+  name: "Mobile Allowance (MB) - ₹56.94 per day",
+  category: "Earning",
+  type: "Custom",
+  version: "FY2024-2025",
+  description: "Mobile Allowance = 56.94 * payable days",
+  condition: "payableDays > 0",
+  monthlyFormula: "round(56.94 * payableDays, 2)",
+  annualFormula: "round(56.94 * payableDays, 2)",
+};

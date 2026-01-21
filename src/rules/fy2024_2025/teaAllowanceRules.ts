@@ -7,9 +7,8 @@ export const teaAllowanceRule: Rule = {
   category: "Earning",
   type: "Custom",
   version: "FY2024-2025",
-  description: "Tea Allowance = 544 * No of payable days",
+  description: "Tea Allowance = 5.44 * No of payable days",
   condition: "payableDays > 0",
-  monthlyFormula: "round(544 * payableDays, 2)",
-  annualFormula: "round(544 * payableDays * 12, 2)",
+  monthlyFormula: "round(5.44 * payableDays, 2)",
+  annualFormula: "round(5.44 * payableDays * 12, 2)",
 };
-
